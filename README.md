@@ -117,14 +117,13 @@ python run_api.py
 
 Server starts at: `http://localhost:8000`
 
-### 🚀 **Example request (POST)**
+### 🚀 **Example request (GET)**
 
-Use any HTTP client or terminal:
+You can send a search query using a simple GET request with the query embedded in the URL path.
 
 ```bash
-curl -X POST http://localhost:8000/search \
-      -H "Content-Type: application/json" \
-      -d "{\"query\": \"comi\"}"
+curl http://localhost:8000/search/comi
+
 ```
 
 **Response:**
