@@ -4,9 +4,9 @@ from search_service import perform_search
 
 router = APIRouter()
 
-@router.post("/search")
-def search_post(payload: SearchQuery):
-    return {"results": perform_search(payload.query)}
+@router.get("/search/{query}")
+def search_get(query: str):
+    return {"results": perform_search(query)}
 
 @router.get("/health")
 def health_check():
